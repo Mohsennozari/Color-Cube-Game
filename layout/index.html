@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Cube Game</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div id="controlsContainer">
+        <div id="score">Score: 0</div>
+        <div id="timer">Time: 0</div>
+        <div id="countdown">Countdown: 60s</div>
+        <div id="highScore">High Score: 0</div>
+        <div id="userProfile">Profile: Not saved</div>
+        
+        <select id="difficultySelector">
+            <option value="0">Easy</option>
+            <option value="1">Medium</option>
+            <option value="2">Hard</option>
+        </select>
+        
+        <select id="cubeSizeSelector">
+            <option value="100">Small</option>
+            <option value="150">Medium</option>
+            <option value="200">Large</option>
+        </select>
+
+        <select id="shapeSelector">
+            <option value="square">Square</option>
+            <option value="round">Round</option>
+        </select>
+        
+        <input type="color" id="colorPicker" value="#ff0000">
+        <input type="color" id="backgroundColorPicker" value="#f0f0f0">
+        
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="saveProfile">Save Profile</button>
+        
+        <button id="resetButton">Reset Game</button>
+        <button id="resetHighScore">Reset High Score</button>
+        
+        <button id="toggleMusic">Play Music</button>
+    </div>
+
+    <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+    <audio id="backgroundMusic" src="background.mp3" preload="auto" loop></audio>
+
+    <div id="instructions" class="overlay">
+        <div class="overlay-content">
+            <h2>Instructions</h2>
+            <p>Click on the cubes to change their color. Score points for each click. Try to achieve the highest score before the time runs out!</p>
+            <button id="closeInstructions">Close</button>
+        </div>
+    </div>
+
+    <div id="gameBoard"></div>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>

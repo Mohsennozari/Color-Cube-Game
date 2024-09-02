@@ -18,9 +18,7 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
+
 
 body {
     font-family: Georgia, serif; // Use Georgia font
@@ -36,6 +34,7 @@ body {
 // Container for controls
 #controlsContainer {
     display: flex;
+    margin-top: 40px;
     flex-wrap: wrap; // Allow elements to wrap to a new line if needed
     justify-content: center; // Center horizontally
     margin-bottom: 20px;
@@ -75,15 +74,15 @@ body {
 
 // Game Board Styles
 #gameBoard {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 20px;
-    width: 80%;
-    max-width: 800px;
     background-color: #e9ecef;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
+    margin: 40px;
+    max-width: 80%;
     box-shadow: $box-shadow;
 
     .cube {
